@@ -12,6 +12,7 @@ export enum OpenAIModelID {
   GPT_3_5_AZ = 'gpt-35-turbo',
   GPT_4 = 'gpt-4',
   GPT_4_32K = 'gpt-4-32k',
+  GPT_4_0613 = 'gpt-4-0613',
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
@@ -35,6 +36,12 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
     name: 'GPT-4',
     maxLength: 24000,
     tokenLimit: 8000,
+  },
+  [OpenAIModelID.GPT_4_0613]: {
+    id: OpenAIModelID.GPT_4_0613,
+    name: 'GPT-4-0613',
+    maxLength: 48000,
+    tokenLimit: 16000,
   },
   [OpenAIModelID.GPT_4_32K]: {
     id: OpenAIModelID.GPT_4_32K,
